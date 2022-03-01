@@ -45,4 +45,8 @@ public class Book extends Product {
                 ", author='" + author + '\'' +
                 '}';
     }
+
+    public boolean matches(String textForSearch){
+        return super.matches(textForSearch) || this.author.contains(textForSearch);
+    }
 }

@@ -49,6 +49,17 @@ class ProductManagerTest {
     }
 
     @Test
+    public void shouldSearchPhoneTwoFabricAndName() {
+        catalog.addItem(sumsung);
+        catalog.addItem(apple);
+        Smartphone apple2 = new Smartphone(2, "Apple IPhone 2", 1000, "Apple");
+        catalog.addItem(apple2);
+        Product[] actual = catalog.searchBy("Apple");
+        Product[] expected = new Product[]{apple, apple2};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSearchBookName() {
         catalog.addItem(coreJava);
         catalog.addItem(python);
