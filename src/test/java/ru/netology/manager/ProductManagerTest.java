@@ -95,4 +95,17 @@ class ProductManagerTest {
 //        System.out.println(actual[0].getName());
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public  void BookTest() {
+        Book myJava = new Book(1, "Java", 200, "CoolProgrammer");
+        assertTrue(myJava.matches("Cool"));
+    }
+
+    @Test
+    public  void SmartphoneTest() {
+       Smartphone mySumsung = new Smartphone(1, "Sumsung S8", 200, "Sumsung Inc.");
+       assertTrue(mySumsung.matches("Inc"));
+
+    }
 }
